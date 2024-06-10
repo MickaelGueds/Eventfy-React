@@ -9,7 +9,7 @@ function AppRoutes(){
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={ <Header/> }></Route>
-                <Route path="/login" element={ <AnimationBackground/> }></Route>
+                <Route path="/login" element={ <Login/> }></Route>
                 <Route path="/GestaoDeParticipantes" element={ <GestaoDeParticipantes/> }></Route>
 
             </Routes>
