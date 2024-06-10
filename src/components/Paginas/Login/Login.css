@@ -91,3 +91,22 @@
     text-align: center;
     margin: 20px 0 10px;
 }
+
+
+.backgroundAnimation {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.App {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+  }

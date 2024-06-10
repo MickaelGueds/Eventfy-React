@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom" 
+import { Route, Routes } from "react-router-dom" 
 import Header from "./components/Header"
 import GestaoDeParticipantes from "./components/Paginas/gestãoParticipante"
 import Login from './components/Paginas/Login/Login'
@@ -6,15 +6,11 @@ import Login from './components/Paginas/Login/Login'
 
 function AppRoutes(){
     return (
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={ <Header/> }></Route>
-                <Route path="/login" element={ <Login/> }></Route>
-                <Route path="/GestaoDeParticipantes" element={ <GestaoDeParticipantes/> }></Route>
-
-            </Routes>
-        
-        </BrowserRouter>
+        <Routes>
+            <Route path="/" element={ <Header/> }></Route>
+            <Route path="/login" element={ <Login/> }></Route>
+            <Route path="/GestaoDeParticipantes" element={ <GestaoDeParticipantes/> }></Route>
+        </Routes>
     )
      
 }

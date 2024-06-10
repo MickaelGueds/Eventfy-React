@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { Container, Title } from './styles'
+import { useState } from 'react'
+import { Container } from './styles'
 import { FaBars } from 'react-icons/fa'
 import Sidebar from '../Sidebar'
 import styles from'./Header.module.css'
@@ -12,9 +12,11 @@ const Header = () => {
 
   return (
     <Container>
-      <h1 className={styles.titulo}>Eventify</h1>
-      <FaBars onClick={showSiderbar} />
+      <div className={styles.faBarsContainer}>
+        <FaBars onClick={showSiderbar} />
+      </div>
       {sidebar && <Sidebar active={setSidebar} />}
+      <h1 className={styles.titulo}>Eventify</h1>
     </Container>
   )
 }

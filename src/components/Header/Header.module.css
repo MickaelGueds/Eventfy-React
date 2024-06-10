@@ -1,6 +1,22 @@
 .titulo {
-    padding-left: 600px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
     font-weight: bold;
     color: white;
     font-size: 40px;
+}
+
+.faBarsContainer{
+    display: flex;
+    width: 60px;
+    color: white;
+    align-items: center;
+    justify-content: center;
+}
+
+.faBarsContainer svg{
+    width: 30px;
+    cursor: pointer;
+    height: 30px;
 }
