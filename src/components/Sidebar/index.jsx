@@ -28,7 +28,7 @@ const Sidebar = ({ active }) => {
         <SidebarItem Icon={FaChartBar} Text="Statistics" />
         <SidebarItem Icon={FaUserAlt} Text="Users" />
         <SidebarItem Icon={FaEnvelope} Text="Mail" />
-        <SidebarItem Icon={FaRegCalendarAlt} Text="Calendar" />
+        <SidebarItem Icon={FaRegCalendarAlt} Text="Calendar" Path="/"/>
         <SidebarItem Icon={FaIdCardAlt} Text="Employees" />
         <SidebarItem Icon={FaRegFileAlt} Text="Gestão de Participante" Path="/GestaoDeParticipantes" />
         <SidebarItem Icon={FaRegSun} Text="Settings" />

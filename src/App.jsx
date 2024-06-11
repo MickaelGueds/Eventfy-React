@@ -4,9 +4,14 @@ import { BrowserRouter } from 'react-router-dom';
 
 function App() {
   return (
-    <BrowserRouter>
+    <div>
+      
+      <BrowserRouter>
       <AppRoutes/>
     </BrowserRouter>
+
+
+    </div>
   );
 }
 

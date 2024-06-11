@@ -1,0 +1,95 @@
+/* Calendar.css */
+
+.calendar-container {
+    padding: 20px;
+    background-color: #1a1a1a; /* Preto */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .fc-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .fc-toolbar h2 {
+    font-size: 1.5rem;
+    color: #ffa500; /* Laranja */
+  }
+  
+  .fc-button-group {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .fc-button {
+    background-color: #1e3a8a; /* Azul escuro */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .fc-button:hover {
+    background-color: #ffa500; /* Laranja */
+  }
+  
+  .fc-daygrid-day {
+    background-color: #333; /* Preto escuro */
+    border: 1px solid #444;
+    color: #fff; /* Texto branco */
+  }
+  
+  .fc-daygrid-day:hover {
+    background-color: #fba44e77; /* Preto escuro */
+  }
+  
+  .fc-day-today {
+    background-color: #ffa500 !important; /* Laranja */
+    color: #fff; /* Texto branco */
+  }
+  
+  .fc-timegrid-slot {
+    background-color: #333; /* Preto escuro */
+    border: 1px solid #444;
+    color: #fff; /* Texto branco */
+  }
+  
+  .fc-timegrid-slot:hover {
+    background-color: #444; /* Preto escuro */
+  }
+  
+  .fc-highlight {
+    background-color: rgba(255, 165, 0, 0.3); /* Laranja transparente */
+  }
+  
+  .fc-event {
+    background-color: #1e3a8a; /* Azul escuro */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .fc-event:hover {
+    background-color: #ffa500; /* Laranja */
+  }
+  
+  .fc-day-header {
+    background-color: #1e3a8a; /* Azul escuro */
+    color: #fff;
+    padding: 10px 0;
+  }
+  
+  .fc-col-header-cell-cushion {
+    padding: 10px;
+    color: #fff; /* Texto branco */
+  }
+  
+  .fc-view-harness {
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
