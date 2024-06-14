@@ -1,0 +1,12 @@
+.link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .link:hover {
+    color: #dcdcdc; /* Ou a cor desejada para o hover */
+  }
+  
