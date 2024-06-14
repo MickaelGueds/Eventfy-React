@@ -118,7 +118,7 @@ const Cadastro = () => {
                     <FaLock className={styles.icon} />
                 </div>
 
-                <NavLink to="/login">
+                <NavLink to="/">
                 <button>Cadastrar</button>
                 </NavLink>
             </form>
