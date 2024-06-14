@@ -2,8 +2,9 @@ import { FaUser, FaLock } from "react-icons/fa";
 
 import { useState } from "react";
 
-import "./Login.css";
+import styles from './Login.module.css';
 import { AnimationBackground } from "../../AnimationLogin/AnimationBackground";
+import { NavLink } from "react-router-dom";
 
 const Login = () => {
     const [username, setUsername] = useState("");
@@ -16,39 +17,40 @@ const Login = () => {
     };  
 
   return (
-    <div className="App">
-        <div className="backgroundAnimation" >
+    <div className={styles.App}>
+        <div className={styles.backgroundAnimation} >
             <AnimationBackground/>
         </div>
 
-        <div className="container">
+        <div className={styles.container}>
             <form onSubmit={handleSubmit}>
                 
                 <h1>Login<img src="src/assets/eventify.ico" alt="icone" width={100} height={90}/></h1>
                 
-                <div className="input-field">
+                <div className={styles.inputField}>
                     <input type="email" placeholder='E-mail' 
                     onChange={(e) => setUsername(e.target.value)}  />
-                    <FaUser className="icon"/>
+                    <FaUser className={styles.icon}/>
                 </div>
-                <div className="input-field">
+                <div className={styles.inputField}>
                     <input type="password" placeholder='Senha'
                     onChange={(e) => setPassword(e.target.value)}/>
-                    <FaLock className="icon" />
+                    <FaLock className={styles.icon} />
                 </div>
 
-            <div className="recall-forget">
+            <div className={styles.recallForget}>
                 <label>
                     <input type="checkbox" />
                     Lembre de mim
                 </label>
                 <a href="#">Esqueceu a senha?</a>
             </div>
+                <NavLink to="/home">
+                    <button>Entrar</button>
+                </NavLink>
 
-                <button>Entrar</button>
-
-                <div className="signup-link">
-                    <p>Não tem uma conta? <a href="#">Registrar</a></p>
+                <div className={styles.signupLink}>
+                    <p>Não tem uma conta? <NavLink to="/cadastro">Cadastrar</NavLink></p>
                 </div>
 
             </form>

@@ -16,14 +16,14 @@
     align-items: center;
 }
 
-.container .input-field {
+.container .inputField {
     position: relative;
     width: 100%;
     height: 50px;
     margin: 30px auto;
 }
 
-.input-field input {
+.inputField input {
     width: 100%;
     height: 100%;
     background-color: transparent;
@@ -35,11 +35,11 @@
     padding: 20px 25px;
 }
 
-.input-field input::placeholder{
+.inputField input::placeholder{
     color: #ffff;
 }
 
-.input-field .icon {
+.inputField .icon {
     position: absolute;
     right: 25px;
     top: 50%;
@@ -48,27 +48,27 @@
     color: #fff;
 }
 
-.container .recall-forget {
+.container .recallForget {
     display: flex;
     justify-content: space-between;
     font-size: 14.5px;
     margin: -15px 0 15px;
 }
 
-.recall-forget label {
+.recallForget label {
     color: #fff;
 }
 
-.recall-forget input{
+.recallForget input{
     margin-right: 5px;
 }
 
-.recall-forget a, .signup-link p a {
+.recallForget a, .signupLink p a {
     color: #fff;
     text-decoration: none;
 }
 
-.recall-forget a:hover, .signup-link p a:hover {
+.recallForget a:hover, .signupLink p a:hover {
     text-decoration: underline;
 }
 
@@ -86,7 +86,7 @@
     text-shadow: none;
 }
 
-.container .signup-link {
+.container .signupLink {
     font-size: 15px;
     text-align: center;
     margin: 20px 0 10px;
