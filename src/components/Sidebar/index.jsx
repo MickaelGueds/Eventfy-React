@@ -29,7 +29,7 @@ const Sidebar = ({ active }) => {
         <SidebarItem Icon={FaUserAlt} Text="Users" />
         <SidebarItem Icon={FaEnvelope} Text="Mail" />
         <SidebarItem Icon={FaRegCalendarAlt} Text="Calendar" Path="/calendario"/>
-        <SidebarItem Icon={FaIdCardAlt} Text="Employees" />
+        <SidebarItem Icon={FaIdCardAlt} Text="Criar Evento" Path="/Criar"/>
         <SidebarItem Icon={FaRegFileAlt} Text="Gestão de Participante" Path="/GestaoDeParticipantes" />
         <SidebarItem Icon={FaRegSun} Text="Settings" />
       </Content>

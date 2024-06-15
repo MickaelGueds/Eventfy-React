@@ -33,7 +33,6 @@ const GestaoDeParticipantes = () => {
 
     setParticipantes(participantesAtualizados);
 
-    // Atualizar o estado global dos participantes
     setDadosDosParticipantes(prevDados => ({
       ...prevDados,
       [eventoSelecionado]: participantesAtualizados,
