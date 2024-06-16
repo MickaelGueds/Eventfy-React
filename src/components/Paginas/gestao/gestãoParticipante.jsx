@@ -7,7 +7,7 @@ const eventos = [
 
 const participantesPorEvento = {
   1: [
-    { id: 1, nome: 'Andreas do Corre', email: 'criadefavela@gmail.com', status: 'pendente' },
+    { id: 1, nome: 'michele rapariga', email: 'criadefavela@gmail.com', status: 'pendente' },
     { id: 2, nome: 'Guigui da Mamãe', email: 'mamaepodesim@gmail.com', status: 'pendente' },
   ],
   2: [

@@ -4,10 +4,10 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx';
 import './App.css'; // Certifique-se de que este arquivo existe no diretório src
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  </React.StrictMode>
 );
-  
