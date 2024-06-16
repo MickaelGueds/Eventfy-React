@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom" 
 import Header from "./components/Header"
-import GestaoDeParticipantes from "./components/Paginas/gestãoParticipante"
+import GestaoDeParticipantes from "./components/Paginas/gestao/gestãoParticipante"
 import Login from './components/Paginas/Login/Login'
 import Cadastro from "./components/Paginas/Cadastro/Cadastro"
 import Calendar from "./components/Paginas/Calendario/Calendar"
