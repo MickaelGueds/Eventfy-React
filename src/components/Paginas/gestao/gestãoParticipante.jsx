@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './gestao.css'
 
 const eventos = [
   { id: 1, nome: 'Evento na Rocinha' },
