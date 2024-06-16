@@ -1,0 +1,148 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: right;
+    padding-bottom: 20px; 
+    
+     
+}
+
+.blur-background {
+    position: flex;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('') no-repeat center center;
+    background-size: cover;
+    filter: blur(10px);
+    z-index: 1;
+  }
+  
+
+.event-banner {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    max-width: 1200px;
+    width: 90%;
+    z-index: 2;
+    position: relative;
+    margin: 20px 0; /* Ajustado para espaçamento superior e inferior */
+    background: linear-gradient(270deg, #ff8c00, #191970, black);
+    animation: GradientAnimation 10s ease infinite;
+    background-size: 1400% 1400%;
+}
+
+.event-details {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.event-details h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.event-details p {
+    font-size: 1.2rem;
+    margin: 5px 0;
+}
+
+.event-details .buy-ticket,
+.event-details .show-details {
+    background-color: orange;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+    margin-left: 10px;
+    transition: transform 0.03s;
+}
+.event-details .buy-ticket,
+.event-details .show-details :hover{
+    background-color: #ff8c00;
+}
+
+
+
+.event-image img {
+    max-height: 300px;
+    border-radius: 10px;
+}
+
+@keyframes GradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.related-events {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    width: 90%;
+    max-width: 1200px;
+    z-index: 2;
+    position: relative;
+}
+
+.related-events h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.related-events-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.related-event {
+    text-align: center;
+}
+
+.related-event img {
+    max-height: 300px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.related-event img:hover {
+    transform: scale(1.05);
+}
+
+.related-event p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+.event-details-more {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+}
