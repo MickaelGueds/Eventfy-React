@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './gestao.css'
+import Header from '../../Header';
 
 const eventos = [
   { id: 1, nome: 'Evento na Rocinha' },
@@ -34,7 +35,7 @@ const GestaoDeParticipantes = () => {
 
     setParticipantes(participantesAtualizados);
 
-    // Atualizar o estado global dos participantes
+    
     setDadosDosParticipantes(prevDados => ({
       ...prevDados,
       [eventoSelecionado]: participantesAtualizados,
@@ -42,6 +43,9 @@ const GestaoDeParticipantes = () => {
   };
 
   return (
+    <div>
+      <Header/>
+    <body id="name">
     <div className="card">
       <h1>Gestão de Participantes</h1>
       <div>
@@ -67,6 +71,8 @@ const GestaoDeParticipantes = () => {
           </li>
         ))}
       </ul>
+    </div>
+    </body>
     </div>
   );
 };

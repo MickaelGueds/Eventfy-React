@@ -4,9 +4,12 @@ import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
 import './Calendar.css';
+import Header from '../../Header';
 
 function Calendar() {
   return (
+    <div>
+    <Header/>
     <div className="calendar-container"> 
       <Fullcalendar
         plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
@@ -18,6 +21,7 @@ function Calendar() {
         }}
         height={"90vh"}
       />
+    </div>
     </div>
   );
 }
