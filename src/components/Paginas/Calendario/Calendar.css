@@ -69,10 +69,13 @@
     color: #fff;
     border: none;
     border-radius: 5px;
+    font-size: 16px;
+    line-height: 1.5;
+    white-space: normal;
   }
   
   .fc-event:hover {
-    background-color: #ffa500; /* Laranja */
+    background-color: darkblue; /* Laranja */
   }
   
   .fc-day-header {
@@ -83,10 +86,13 @@
   
   .fc-col-header-cell-cushion {
     padding: 10px;
-    color: #fff; /* Texto branco */
+    color: orange; /* Texto branco */
   }
   
   .fc-view-harness {
     border-radius: 10px;
     overflow: hidden;
+  }
+  .fc-event-title {
+    color: #ffa500; /* Laranja */
   }

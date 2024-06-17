@@ -28,7 +28,7 @@ const Evento = () => {
         <section className="event-banner">
           <div className="event-details">
             <h2>Festival de Cinema Independente e Arte Experimental</h2>
-            <p><i className="far fa-calendar-alt"></i> 20 de julho de 2024</p>
+            <p><i className="far fa-calendar-alt"></i> 4 de julho de 2024</p>
             <p><i className="fas fa-map-marker-alt"></i>Teatro G3 Telecom - Teresina/PI</p>
             <button className="buy-ticket">INSCREVA-SE AQUI</button>
             <button className="show-details" onClick={toggleDetails}>VER MAIS DETALHES</button>

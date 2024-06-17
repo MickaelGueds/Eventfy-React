@@ -28,7 +28,7 @@ const Evento = () => {
         <section className="event-banner">
           <div className="event-details">
             <h2>Encontro de Literatura e Performance Poética</h2>
-            <p><i className="far fa-calendar-alt"></i> 30 de julho de 2024</p>
+            <p><i className="far fa-calendar-alt"></i> 30 de junho de 2024</p>
             <p><i className="fas fa-map-marker-alt"></i>Teatro G3 Telecom - Teresina/PI</p>
             <button className="buy-ticket">INSCREVA-SE AQUI</button>
             <button className="show-details" onClick={toggleDetails}>VER MAIS DETALHES</button>
