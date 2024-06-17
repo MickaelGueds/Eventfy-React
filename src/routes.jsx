@@ -15,6 +15,10 @@ import Comu from '../src/components/eventos/Des/Comu'
 import Entre from '../src/components/eventos/Des/Entre'
 import Gestao from './components/eventos/Des/gestao'
 import CreateEvent from '../src/components/Paginas/criar/criarEvento'
+import Home from '../src/components/Home/Home'
+import Fest from '../src/components/eventos/Cult/Fest'
+import Lite from '../src/components/eventos/Cult/Lite'
+import Urban from '../src/components/eventos/Cult/Urban'
 
 
 
@@ -22,7 +26,7 @@ import CreateEvent from '../src/components/Paginas/criar/criarEvento'
 function AppRoutes(){
     return (
         <Routes>
-            <Route path="/home" element={ <Header/> }></Route>
+            <Route path="/home" element={ <Home/> }></Route>
             <Route path="/" element={ <Login/> }></Route>
             <Route path="/calendario" element={ <Calendar/> }></Route>
             <Route path="/cadastro" element= { <Cadastro/> }></Route>
@@ -38,6 +42,10 @@ function AppRoutes(){
             <Route path="/Entre" element = {<Entre/>}></Route>
             <Route path="/Gestao" element = {<Gestao/>}></Route>
             <Route path = "/criar" element = {<CreateEvent/>}></Route>
+            <Route path = "/Fest" element = {<Fest/>}></Route>
+            <Route path = "/Lite" element = {<Lite/>}></Route>
+            <Route path = "/Urban" element = {<Urban/>}></Route>
+
         </Routes>
     )
     

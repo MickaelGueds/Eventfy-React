@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import styles from './event.module.css';
 import Header from '../../Header';
 
@@ -89,12 +89,17 @@ const CreateEvent = () => {
                     </div>
                     <div>
                         <label className={styles.labelEvento}>Categoria:</label>
-                        <input
-                            type="text"
-                            className={styles.inputEvento}
+                        <select
+                            className={styles.selectEvento}
                             value={category}
                             onChange={(e) => setCategory(e.target.value)}
-                        />
+                        >
+                            <option value="">Selecione uma categoria</option>
+                            <option value="Desenvolvimento Pessoal e Carreira">Desenvolvimento Pessoal e Carreira</option>
+                            <option value="Tecnologia e Inovação">Tecnologia e Inovação</option>
+                            <option value="Sustentabilidade e Responsabilidade Social">Sustentabilidade e Responsabilidade Social</option>
+                            <option value="Cultura e Expressão Artística">Cultura e Expressão Artística</option>
+                        </select>
                     </div>
                     <div>
                         <label className={styles.labelEvento}>Imagem:</label>

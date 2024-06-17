@@ -3,10 +3,6 @@ import { Container, Content } from './styles'
 import { 
   FaTimes, 
   FaHome, 
-  FaEnvelope, 
-  FaRegSun, 
-  FaUserAlt, 
-  FaIdCardAlt, 
   FaRegFileAlt,
   FaRegCalendarAlt,
   FaChartBar
@@ -24,7 +20,7 @@ const Sidebar = ({ active }) => {
     <Container sidebar={active}>
       <FaTimes onClick={closeSidebar} />  
       <Content>
-        <SidebarItem Icon={FaHome} Text=" Home" Path="/" />
+        <SidebarItem Icon={FaHome} Text=" Home" Path="/Home" />
         <SidebarItem Icon={FaChartBar} Text="Statistics" Path="/estatisticas"/>
         {/* <SidebarItem Icon={FaUserAlt} Text="Users" /> */}
         {/* <SidebarItem Icon={FaEnvelope} Text="Mail" /> */}

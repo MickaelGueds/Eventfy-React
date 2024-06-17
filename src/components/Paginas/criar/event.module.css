@@ -1,6 +1,5 @@
 /* event.module.css */
 
-/* Estilos Gerais */
 .bodyEvento {
     font-family: Arial, sans-serif;
     background-color: darkblue;
@@ -12,7 +11,7 @@
     justify-content: center;
 }
 
-/* Estilos para o Formulário */
+
 .formEvento {
     background: orange;
     padding: 20px;
@@ -22,10 +21,10 @@
     max-width: 600px;
 }
 
-/* Estilos para os Campos do Formulário */
+
 .formEvento > div {
     margin-bottom: 15px;
-    color:darkblue;
+    color: darkblue;
     font-size: 20px;
 }
 
@@ -36,17 +35,18 @@
 }
 
 .inputEvento,
-.textareaEvento {
+.textareaEvento,
+.selectEvento {
     width: calc(100% - 20px);
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid blue;
     border-radius: 10px;
     background-color: darkblue;
-    color:white;
+    color: white;
 }
 
-/* Estilos para o Campo de Imagem */
+
 .customFileUploadEvento {
     display: inline-block;
     cursor: pointer;
@@ -80,7 +80,7 @@
     border-radius: 4px;
 }
 
-/* Estilos para o Botão de Submissão */
+
 .submitButtonEvento {
     background-color: #28a745;
     color: white;

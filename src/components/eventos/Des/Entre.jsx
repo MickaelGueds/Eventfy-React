@@ -29,7 +29,7 @@ const Evento = () => {
           <div className="event-details">
             <h2>Como se Preparar para Entrevistas de Emprego no Setor de Tecnologia</h2>
             <p><i className="far fa-calendar-alt"></i> 20 de julho de 2024</p>
-            <p><i className="fas fa-map-marker-alt"></i>Teresina Hall - Teresina/PI</p>
+            <p><i className="fas fa-map-marker-alt"></i>Teatro G3 Telecom - Teresina/PI</p>
             <button className="buy-ticket">INSCREVA-SE AQUI</button>
             <button className="show-details" onClick={toggleDetails}>VER MAIS DETALHES</button>
             <div id="event-details-more" className="event-details-more" style={{ display: showDetails ? 'block' : 'none' }}>
