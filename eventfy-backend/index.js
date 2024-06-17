@@ -20,6 +20,7 @@ db.connect(err => {
     }
     console.log('Connected to the database.');
 });
+//parte de cadastros
 
 app.post('/cadastro', (req, res) => {
     const { username, telefone, usercpf, usercep, estado, cidade, userrua, numero, useremail, password } = req.body;
@@ -60,6 +61,9 @@ app.post('/cadastro', (req, res) => {
         });
     });
 });
+// parte de login
+
+
 app.post('/login', (req, res) => {
     const { useremail, password } = req.body;
 
@@ -79,6 +83,45 @@ app.post('/login', (req, res) => {
         } else {
             res.status(401).send('Invalid email or password');
         }
+    });
+});
+// aqui é a parte de eventos
+
+
+app.post('/cadastro', (req, res) => {
+    const { nome_evento, data, local, ingressos_disponiveis, ingressos_comprados } = req.body;
+
+    console.log('Received data:', req.body);
+
+    if (!nome_evento || !data || !local || !ingressos_disponiveis || !ingressos_comprados) {
+        console.error('Missing fields');
+        return res.status(400).send('All fields are required');
+    }
+
+    const checkQuery = 'SELECT * FROM eventos WHERE nome = ?';
+    db.query(checkQuery, [nome_evento], (checkErr, checkResults) => {
+        if (checkErr) {
+            console.error('Error checking event name:', checkErr.sqlMessage);
+            return res.status(500).send('Error checking event name: ' + checkErr.sqlMessage);
+        }
+
+        if (checkResults.length > 0) {
+            console.error('Event name already exists');
+            return res.status(400).send('Event name already exists');
+        }
+
+        const insertQuery = 'INSERT INTO eventos (nome_evento, data, localizacao, ingressos_disponiveis, ingressos_vendidos) VALUES (?, ?, ?, ?, ?)';
+        const values = [nome_evento, data, local, ingressos_disponiveis, ingressos_comprados];
+
+        db.query(insertQuery, values, (insertErr, insertResults) => {
+            if (insertErr) {
+                console.error('Error inserting data into the database:', insertErr.sqlMessage);
+                return res.status(500).send('Error inserting data: ' + insertErr.sqlMessage);
+            }
+
+            console.log('Data inserted successfully');
+            res.status(200).send('Event registered successfully');
+        });
     });
 });
 
