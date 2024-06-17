@@ -14,6 +14,7 @@ import Educa from '../src/components/eventos/Sust/Educa'
 import Comu from '../src/components/eventos/Des/Comu'
 import Entre from '../src/components/eventos/Des/Entre'
 import Gestao from './components/eventos/Des/gestao'
+import CreateEvent from '../src/components/Paginas/criar/criarEvento'
 
 
 
@@ -35,6 +36,7 @@ function AppRoutes(){
             <Route path="/Comu" element = {<Comu/>}></Route>
             <Route path="/Entre" element = {<Entre/>}></Route>
             <Route path="/Gestao" element = {<Gestao/>}></Route>
+            <Route path = "/criar" element = {<CreateEvent/>}></Route>
         </Routes>
     )
     
