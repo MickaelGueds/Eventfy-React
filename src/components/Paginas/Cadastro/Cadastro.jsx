@@ -42,7 +42,7 @@ const Cadastro = () => {
             .then(response => {
                 console.log(response.data);
                 alert('Usuário cadastrado com sucesso!');
-                navigate('Login'); 
+                navigate('/Login'); 
             })
             .catch(error => {
                 console.error("Houve um erro ao cadastrar o usuário!", error);

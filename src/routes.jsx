@@ -1,5 +1,4 @@
 import { Route, Routes } from "react-router-dom" 
-import Header from "./components/Header"
 import GestaoDeParticipantes from "./components/Paginas/gestao/gestãoParticipante"
 import Login from './components/Paginas/Login/Login'
 import Cadastro from "./components/Paginas/Cadastro/Cadastro"
@@ -15,7 +14,7 @@ import Comu from '../src/components/eventos/Des/Comu'
 import Entre from '../src/components/eventos/Des/Entre'
 import Gestao from './components/eventos/Des/gestao'
 import CreateEvent from '../src/components/Paginas/criar/criarEvento'
-import Home from '../src/components/Home/Home'
+import Home from '../src/components/home/Home'
 import Fest from '../src/components/eventos/Cult/Fest'
 import Lite from '../src/components/eventos/Cult/Lite'
 import Urban from '../src/components/eventos/Cult/Urban'
@@ -27,7 +26,7 @@ function AppRoutes(){
     return (
         <Routes>
             <Route path="/home" element={ <Home/> }></Route>
-            <Route path="/" element={ <Login/> }></Route>
+            <Route path="/Login" element={ <Login/> }></Route>
             <Route path="/calendario" element={ <Calendar/> }></Route>
             <Route path="/cadastro" element= { <Cadastro/> }></Route>
             <Route path="/GestaoDeParticipantes" element={ <GestaoDeParticipantes/> }></Route>
