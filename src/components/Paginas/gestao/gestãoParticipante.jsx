@@ -61,9 +61,9 @@ const GestaoDeParticipantes = () => {
         {participantes.map(participante => (
           <li key={participante.id}>
             {participante.nome} ({participante.email}) - {participante.status}
-            <button onClick={() => atualizarStatus(participante.id, 'Aceito')}>Aceitar</button>
-            <button onClick={() => atualizarStatus(participante.id, 'Negado')}>Recusar</button>
-            <button onClick={() => atualizarStatus(participante.id, 'Cancelado')}>Cancelar</button>
+            <button id = "aceitar" onClick={() => atualizarStatus(participante.id, 'Aceito')}>Aceitar</button>
+            <button id = "recusar" onClick={() => atualizarStatus(participante.id, 'Negado')}>Recusar</button>
+            <button id = "cancelar" onClick={() => atualizarStatus(participante.id, 'Cancelado')}>Cancelar</button>
           </li>
         ))}
       </ul>
