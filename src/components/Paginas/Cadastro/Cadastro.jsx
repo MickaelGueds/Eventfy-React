@@ -5,6 +5,7 @@ import styles from './Cadastro.module.css';
 import { AnimationBackground } from "../../AnimationLogin/AnimationBackground";
 import { IoIosArrowDropdownCircle } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
+import { NavLink } from 'react-router-dom';
 
 const Cadastro = () => {
     const [username, setUsername] = useState("");
@@ -41,7 +42,7 @@ const Cadastro = () => {
             .then(response => {
                 console.log(response.data);
                 alert('Usuário cadastrado com sucesso!');
-                navigate('/login'); // Redireciona para a página de login após o cadastro bem-sucedido
+                navigate('Login'); 
             })
             .catch(error => {
                 console.error("Houve um erro ao cadastrar o usuário!", error);
@@ -138,10 +139,14 @@ const Cadastro = () => {
                             <input type="password" placeholder='Senha' value={password} onChange={(e) => setPassword(e.target.value)} />
                             <FaLock className={styles.icon} />
                         </div>
-
-                        <button type="submit">Cadastrar</button>
+                        
+                            <button type="submit">Cadastrar</button>
+                            
+                        
                     </form>
+                    
                 </div>
+                
             </div>
         </div>
     );
