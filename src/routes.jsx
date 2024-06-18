@@ -4,22 +4,23 @@ import Login from './components/Paginas/Login/Login';
 import Cadastro from "./components/Paginas/Cadastro/Cadastro";
 import Calendar from "./components/Paginas/Calendario/Calendar";
 import RelatoriosEAnalises from "./components/Paginas/Estatisticas/RelatoriosEAnalises";
-import React from '../src/components/eventos/tecno/React';
-import IA from '../src/components/eventos/tecno/IA';
-import Blockchain from '../src/components/eventos/tecno/Blockchain';
-import Include from '../src/components/eventos/Sust/Include';
-import Renova from '../src/components/eventos/Sust/Renova';
-import Educa from '../src/components/eventos/Sust/Educa';
-import Comu from '../src/components/eventos/Des/Comu';
-import Entre from '../src/components/eventos/Des/Entre';
+import React from './components/eventos/tecno/React';
+import IA from './components/eventos/tecno/IA';
+import Blockchain from './components/eventos/tecno/Blockchain';
+import Include from './components/eventos/Sust/Include';
+import Renova from './components/eventos/Sust/Renova';
+import Educa from './components/eventos/Sust/Educa';
+import Comu from './components/eventos/Des/Comu';
+import Entre from './components/eventos/Des/Entre';
 import Gestao from './components/eventos/Des/gestao';
-import CreateEvent from '../src/components/Paginas/criar/criarEvento';
-import Home from '../src/components/Home/Home';
-import Fest from '../src/components/eventos/Cult/Fest';
-import Lite from '../src/components/eventos/Cult/Lite';
-import Urban from '../src/components/eventos/Cult/Urban';
+import CreateEvent from './components/Paginas/criar/criarEvento';
+import Home from './components/Home/Home';
+import Fest from './components/eventos/Cult/Fest';
+import Lite from './components/eventos/Cult/Lite';
+import Urban from './components/eventos/Cult/Urban';
 import OrganizadorLogin from "./components/Paginas/PáginaDes/Login/OrganizadorLogin";
-import Principal from '../src/components/Paginas/PáginaDes/Desenvolvedor/Principal';
+import Principal from './components/Paginas/PáginaDes/Desenvolvedor/Principal';
+import EventPage from './components/Paginas/EventPage/EventPage';
 
 function AppRoutes() {
     return (
@@ -45,11 +46,9 @@ function AppRoutes() {
             <Route path="/Fest" element={<Fest />} />
             <Route path="/Lite" element={<Lite />} />
             <Route path="/Urban" element={<Urban />} />
+            <Route path="/evento/:nome_evento" element={<EventPage />} />
         </Routes>
     );
 }
 
-
 export default AppRoutes;
-
-

@@ -74,6 +74,7 @@ app.post('/login', (req, res) => {
     });
 });
 
+
 app.post('/criar', (req, res) => {
     const { nome_evento, descricao, localizacao, data, horario, ingressos_disponiveis, categoria, imagem_url } = req.body;
 
@@ -200,6 +201,34 @@ export default Evento;
         });
     });
 });
+
+app.get('/eventos/:nome_evento', (req, res) => {
+    const nomeEvento = req.params.nome_evento.replace(/_/g, ' '); // Substitui underscores por espaços
+    console.log('Nome do evento recebido:', nomeEvento);
+    
+    const query = 'SELECT * FROM eventos WHERE nome_evento = ?';
+    db.query(query, [nomeEvento], (err, results) => {
+        if (err) {
+            console.error('Error fetching event:', err);
+            return res.status(500).json({ error: 'Error fetching event: ' + err.sqlMessage });
+        }
+        if (results.length === 0) {
+            console.log('Evento não encontrado:', nomeEvento);
+            return res.status(404).json({ error: 'Event not found' });
+        }
+        console.log('Evento encontrado:', results[0]);
+        res.status(200).json(results[0]);
+    });
+});
+app.get('/test', (req, res) => {
+    const nomeEvento = req.query.nome_evento;
+    console.log('Nome do evento recebido:', nomeEvento);
+    res.status(200).json({ message: `Evento recebido: ${nomeEvento}` });
+});
+
+
+
+
 app.post('/OrgLogin', (req, res) => {
     const { useremail, password } = req.body;
 
