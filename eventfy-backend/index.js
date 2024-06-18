@@ -150,7 +150,7 @@ app.post('/criar', (req, res) => {
                             <p><i className="far fa-calendar-alt"></i> {data}</p>
                             <p><i className="fas fa-map-marker-alt"></i> {localizacao}</p>
                             <button
-                                className={`buy-ticket ${isInscrito ? 'inscrito' : ''}`}
+                                className={\`buy-ticket \${isInscrito ? 'inscrito' : ''}\`}
                                 onClick={handleInscricao}
                                 disabled={isInscrito}
                             >
@@ -187,9 +187,9 @@ app.post('/criar', (req, res) => {
                 );
                 };
 
-                export default Evento;
+export default Evento;
+`;
 
-            `;
 
             try {
                 fs.writeFileSync(filePath, jsxTemplate);
