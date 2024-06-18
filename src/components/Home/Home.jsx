@@ -67,7 +67,7 @@ function Home() {
     <div>
       <Header />
       <div className={styles.container}>
-        <h1 className={styles.title}>Slider com React JS</h1>
+        <h1 className={styles.title}></h1>
 
         <Swiper
           modules={[EffectCoverflow]}
