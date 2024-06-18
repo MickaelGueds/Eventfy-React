@@ -21,6 +21,8 @@ import Urban from './components/eventos/Cult/Urban';
 import OrganizadorLogin from "./components/Paginas/PáginaDes/Login/OrganizadorLogin";
 import Principal from './components/Paginas/PáginaDes/Desenvolvedor/Principal';
 import EventPage from './components/Paginas/EventPage/EventPage';
+import FeedbackForm from './components/Paginas/Feedback/FeedbackForm';
+
 
 function AppRoutes() {
     return (
@@ -47,6 +49,7 @@ function AppRoutes() {
             <Route path="/Lite" element={<Lite />} />
             <Route path="/Urban" element={<Urban />} />
             <Route path="/evento/:nome_evento" element={<EventPage />} />
+            <Route path="/feedback" element={<FeedbackForm />} />
         </Routes>
     );
 }
