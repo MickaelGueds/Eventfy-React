@@ -220,6 +220,15 @@ app.post('/OrgLogin', (req, res) => {
         }
     });
 });
+app.get('/eventos', (req, res) => {
+    const query = 'SELECT * FROM eventos';
+    db.query(query, (err, results) => {
+        if (err) {
+            return res.status(500).json({ error: 'Error fetching events: ' + err.sqlMessage });
+        }
+        res.status(200).json(results);
+    });
+});
 
 
 const PORT = process.env.PORT || 5001;
