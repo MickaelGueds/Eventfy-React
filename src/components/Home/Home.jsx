@@ -16,9 +16,10 @@ import Comu from '../../assets/Comu.webp';
 import Gestao from '../../assets/Gestao.webp';
 import Include from '../../assets/Include.webp';
 import Renova from '../../assets/Renova.webp';
-import Fest from '../../assets/Fest.webp'
-import Urban from '../../assets/Urban.webp'
-import Lite from '../../assets/Lite.webp'
+import Fest from '../../assets/Fest.webp';
+import Urban from '../../assets/Urban.webp';
+import Lite from '../../assets/Lite.webp';
+import { Link } from 'react-router-dom'; // Importar Link para navegação
 
 function Home() {
   const data = [
@@ -98,6 +99,9 @@ function Home() {
             </div>
           </section>
         ))}
+        <div className={styles.feedbackButtonContainer}>
+          <Link to="/feedback" className={styles.feedbackButton}>Deixe seu Feedback</Link>
+        </div>
       </div>
     </div>
   );

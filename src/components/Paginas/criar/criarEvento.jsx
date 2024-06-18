@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from './event.module.css';
-import Header from '../../Header';
+import Header from '../PáginaDes/Desenvolvedor/HeaderDesenvolvedor/HeaderDesenvolvedor';
 
 const CreateEvent = () => {
     const [title, setTitle] = useState('');

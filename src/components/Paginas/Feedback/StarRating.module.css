@@ -1,11 +1,15 @@
-.star-rating {
+.starRating {
   font-size: 30px; /* Tamanho das estrelas */
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
 .star {
   cursor: pointer;
+  transition: color 0.2s ease-in-out;
 }
 
-.star.filled {
+.filled {
   color: #ffd700; /* Cor das estrelas preenchidas */
 }

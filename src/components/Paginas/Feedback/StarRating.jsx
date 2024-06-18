@@ -1,5 +1,5 @@
 import React from 'react';
-import './StarRating.css'; // Estilos CSS para as estrelas
+import styles from './StarRating.module.css'; // Estilos CSS modularizados
 
 const StarRating = ({ rating, onRatingChange }) => {
   const handleClick = (value) => {
@@ -7,13 +7,13 @@ const StarRating = ({ rating, onRatingChange }) => {
   };
 
   return (
-    <div className="star-rating">
+    <div className={styles.starRating}>
       {[...Array(5)].map((_, index) => {
         const starValue = index + 1;
         return (
           <span
             key={index}
-            className={starValue <= rating ? 'star filled' : 'star'}
+            className={starValue <= rating ? `${styles.star} ${styles.filled}` : styles.star}
             onClick={() => handleClick(starValue)}
           >
             ★

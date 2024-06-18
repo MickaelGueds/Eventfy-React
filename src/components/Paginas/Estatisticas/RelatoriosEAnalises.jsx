@@ -1,6 +1,6 @@
 import React from 'react';
 import './RelatoriosEAnalises.css';
-import Header from '../../Header';
+import Header from '../PáginaDes/Desenvolvedor/HeaderDesenvolvedor/HeaderDesenvolvedor';
 
 const RelatoriosEAnalises = () => {
   return (

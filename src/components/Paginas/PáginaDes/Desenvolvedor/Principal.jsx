@@ -15,7 +15,7 @@ const Principal = () => {
                         <FaCalendarPlus className={styles.icon} />
                         <h2>Criar Evento</h2>
                     </Link>
-                    <Link to="/GestaoDeParticipantes*-" className={styles.option}>
+                    <Link to="/GestaoDeParticipantes" className={styles.option}>
                         <FaUsers className={styles.icon} />
                         <h2>Gestão de participantes</h2>
                     </Link>
