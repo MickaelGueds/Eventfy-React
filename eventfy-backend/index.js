@@ -21,23 +21,24 @@ db.connect(err => {
         console.error('Error connecting to the database:', err);
         return;
     }
+    console.log('Connected to the database');
 });
 
 app.post('/cadastro', (req, res) => {
     const { username, telefone, usercpf, usercep, estado, cidade, userrua, numero, useremail, password } = req.body;
 
     if (!username || !telefone || !usercpf || !usercep || !estado || !cidade || !userrua || !numero || !useremail || !password) {
-        return res.status(400).send('All fields are required');
+        return res.status(400).json({ error: 'All fields are required' });
     }
 
     const checkQuery = 'SELECT cpf FROM usuarios WHERE cpf = ?';
     db.query(checkQuery, [usercpf], (checkErr, checkResults) => {
         if (checkErr) {
-            return res.status(500).send(`Error checking CPF: ${checkErr.sqlMessage}`);
+            return res.status(500).json({ error: `Error checking CPF: ${checkErr.sqlMessage}` });
         }
 
         if (checkResults.length > 0) {
-            return res.status(400).send('CPF already exists');
+            return res.status(400).json({ error: 'CPF already exists' });
         }
 
         const insertQuery = 'INSERT INTO usuarios (nome, email, senha, telefone, cpf, cep, estado, cidade, rua, number) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
@@ -45,9 +46,9 @@ app.post('/cadastro', (req, res) => {
 
         db.query(insertQuery, values, (insertErr, insertResults) => {
             if (insertErr) {
-                return res.status(500).send(`Error inserting data: ${insertErr.sqlMessage}`);
+                return res.status(500).json({ error: `Error inserting data: ${insertErr.sqlMessage}` });
             }
-            res.status(200).send('User registered successfully');
+            res.status(200).json({ message: 'User registered successfully' });
         });
     });
 });
@@ -56,19 +57,19 @@ app.post('/login', (req, res) => {
     const { useremail, password } = req.body;
 
     if (!useremail || !password) {
-        return res.status(400).send('Email and password are required');
+        return res.status(400).json({ error: 'Email and password are required' });
     }
 
     const query = 'SELECT * FROM usuarios WHERE email = ? AND senha = ?';
     db.query(query, [useremail, password], (err, results) => {
         if (err) {
-            return res.status(500).send('Error checking user credentials');
+            return res.status(500).json({ error: 'Error checking user credentials' });
         }
 
         if (results.length > 0) {
-            res.status(200).send('Login successful');
+            res.status(200).json({ message: 'Login successful' });
         } else {
-            res.status(401).send('Invalid email or password');
+            res.status(401).json({ error: 'Invalid email or password' });
         }
     });
 });
@@ -77,17 +78,17 @@ app.post('/criar', (req, res) => {
     const { nome_evento, descricao, localizacao, data, horario, ingressos_disponiveis, categoria, imagem_url } = req.body;
 
     if (!nome_evento || !descricao || !localizacao || !data || !horario || !ingressos_disponiveis || !categoria) {
-        return res.status(400).send('All fields except image are required');
+        return res.status(400).json({ error: 'All fields except image are required' });
     }
 
     const checkQuery = 'SELECT * FROM eventos WHERE nome_evento = ?';
     db.query(checkQuery, [nome_evento], (checkErr, checkResults) => {
         if (checkErr) {
-            return res.status(500).send('Error checking event name: ' + checkErr.sqlMessage);
+            return res.status(500).json({ error: 'Error checking event name: ' + checkErr.sqlMessage });
         }
 
         if (checkResults.length > 0) {
-            return res.status(400).send('Event name already exists');
+            return res.status(400).json({ error: 'Event name already exists' });
         }
 
         const insertQuery = 'INSERT INTO eventos (nome_evento, descricao, localizacao, data, horario, ingressos_disponiveis, ingressos_vendidos, categoria, imagem_url) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)';
@@ -95,7 +96,7 @@ app.post('/criar', (req, res) => {
 
         db.query(insertQuery, values, (insertErr, insertResults) => {
             if (insertErr) {
-                return res.status(500).send('Error inserting data: ' + insertErr.sqlMessage);
+                return res.status(500).json({ error: 'Error inserting data: ' + insertErr.sqlMessage });
             }
 
             let categoryFolder;
@@ -178,9 +179,9 @@ app.post('/criar', (req, res) => {
 
             try {
                 fs.writeFileSync(filePath, jsxTemplate);
-                res.status(200).send('Event registered and file created successfully');
+                res.status(200).json({ message: 'Event registered and file created successfully' });
             } catch (err) {
-                res.status(500).send('Error creating file: ' + err.message);
+                res.status(500).json({ error: 'Error creating file: ' + err.message });
             }
         });
     });

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import styles from './event.module.css';
 import Header from '../../Header';
 
@@ -34,16 +34,17 @@ const CreateEvent = () => {
                 body: JSON.stringify(eventData),
             });
 
+            const result = await response.json();
+
             if (!response.ok) {
-                throw new Error('Failed to create event');
+                throw new Error(result.error || 'Failed to create event');
             }
 
-            const result = await response.json();
             console.log(result);
             alert('Evento criado com sucesso!');
         } catch (error) {
             console.error('Error:', error);
-            alert('Erro ao criar o evento.');
+            alert('Erro ao criar o evento: ' + error.message);
         }
     };
 
