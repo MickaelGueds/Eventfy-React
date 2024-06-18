@@ -43,7 +43,7 @@ const participantesPorEvento = {
     { id: 12, nome: 'Sammuel Saraiva', email: 'sammuelSaraiva@gmail.com', status: 'pendente' },
   ],
   7: [
-    { id: 13, nome: 'Chopp Gelado', email: 'Tateligando@gmail.com', status: 'pendente' },
+    { id: 13, nome: 'Luca Zeppelin', email: 'lucaZeppelin@gmail.com', status: 'pendente' },
     { id: 14, nome: 'Pedro Martins', email: 'pedroMartins@gmail.com', status: 'pendente' },
   ],
   8: [
