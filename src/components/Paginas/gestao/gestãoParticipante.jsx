@@ -19,52 +19,52 @@ const eventos = [
 
 const participantesPorEvento = {
   1: [
-    { id: 1, nome: 'Participante 1', email: 'participante1@example.com', status: 'pendente' },
-    { id: 2, nome: 'Participante 2', email: 'participante2@example.com', status: 'pendente' },
+    { id: 1, nome: 'João Artur Veras Alves', email: 'jverasalves@gmail.com', status: 'pendente' },
+    { id: 2, nome: 'José Lucas Marques Silva', email: 'joselucasms07@gmail.com', status: 'pendente' },
   ],
   2: [
-    { id: 3, nome: 'Participante 3', email: 'participante3@example.com', status: 'pendente' },
-    { id: 4, nome: 'Participante 4', email: 'participante4@example.com', status: 'pendente' },
+    { id: 3, nome: 'Gabriel Lages', email: 'gabrielLages@gmail.com', status: 'pendente' },
+    { id: 4, nome: 'Victor Cerqueira', email: 'victorCerqueira@gmail.com', status: 'pendente' },
   ],
   3: [
-    { id: 5, nome: 'Participante 5', email: 'participante5@example.com', status: 'pendente' },
-    { id: 6, nome: 'Participante 6', email: 'participante6@example.com', status: 'pendente' },
+    { id: 5, nome: 'Ives Mendes', email: 'ivesMendes@gmail.com', status: 'pendente' },
+    { id: 6, nome: 'Tárcio Gabriel', email: 'tarcioGabriel@gmail.com', status: 'pendente' },
   ],
   4: [
-    { id: 7, nome: 'Participante 7', email: 'participante7@example.com', status: 'pendente' },
-    { id: 8, nome: 'Participante 8', email: 'participante8@example.com', status: 'pendente' },
+    { id: 7, nome: 'Mickael Gueds', email: 'mickaelGueds@gmail.com', status: 'pendente' },
+    { id: 8, nome: 'Enzo Manoel', email: 'enzoManoel@gmail.com', status: 'pendente' },
   ],
   5: [
-    { id: 9, nome: 'Participante 9', email: 'participante9@example.com', status: 'pendente' },
-    { id: 10, nome: 'Participante 10', email: 'participante10@example.com', status: 'pendente' },
+    { id: 9, nome: 'Edilberto Junior', email: 'edilbertoJunior@gmail.com', status: 'pendente' },
+    { id: 10, nome: 'Celso Filho', email: 'celsoFilho@gmail.com', status: 'pendente' },
   ],
   6: [
-    { id: 11, nome: 'Participante 11', email: 'participante11@example.com', status: 'pendente' },
-    { id: 12, nome: 'Participante 12', email: 'participante12@example.com', status: 'pendente' },
+    { id: 11, nome: 'Lucas César', email: 'lucasCesar@gmail.com', status: 'pendente' },
+    { id: 12, nome: 'Sammuel Saraiva', email: 'sammuelSaraiva@gmail.com', status: 'pendente' },
   ],
   7: [
-    { id: 13, nome: 'Participante 13', email: 'participante13@example.com', status: 'pendente' },
-    { id: 14, nome: 'Participante 14', email: 'participante14@example.com', status: 'pendente' },
+    { id: 13, nome: 'Chopp Gelado', email: 'Tateligando@gmail.com', status: 'pendente' },
+    { id: 14, nome: 'Pedro Martins', email: 'pedroMartins@gmail.com', status: 'pendente' },
   ],
   8: [
-    { id: 15, nome: 'Participante 15', email: 'participante15@example.com', status: 'pendente' },
-    { id: 16, nome: 'Participante 16', email: 'participante16@example.com', status: 'pendente' },
+    { id: 15, nome: 'Pedro Henrique', email: 'pedroHenrique@gmail.com', status: 'pendente' },
+    { id: 16, nome: 'Igor Nezaidy', email: 'igorNezaidy@gmail.com', status: 'pendente' },
   ],
   9: [
-    { id: 17, nome: 'Participante 17', email: 'participante17@example.com', status: 'pendente' },
-    { id: 18, nome: 'Participante 18', email: 'participante18@example.com', status: 'pendente' },
+    { id: 17, nome: 'Alcivan', email: 'Alcivan@gmail.com', status: 'pendente' },
+    { id: 18, nome: 'Luiz Felipe Aguiar', email: 'LFAguiar@example.com', status: 'pendente' },
   ],
   10: [
-    { id: 19, nome: 'Participante 19', email: 'participante19@example.com', status: 'pendente' },
-    { id: 20, nome: 'Participante 20', email: 'participante20@example.com', status: 'pendente' },
+    { id: 19, nome: 'Heitor Luz', email: 'heitorLuz@gmail.com', status: 'pendente' },
+    { id: 20, nome: 'Pedro Elvas', email: 'pedroElvas@gmail.com', status: 'pendente' },
   ],
   11: [
-    { id: 21, nome: 'Participante 21', email: 'participante21@example.com', status: 'pendente' },
-    { id: 22, nome: 'Participante 22', email: 'participante22@example.com', status: 'pendente' },
+    { id: 21, nome: 'Marcos Vilanova', email: 'marcosVilanova@gmail.com', status: 'pendente' },
+    { id: 22, nome: 'Rafael Paz', email: 'rafaPaz@gmail.com', status: 'pendente' },
   ],
   12: [
-    { id: 23, nome: 'Participante 23', email: 'participante23@example.com', status: 'pendente' },
-    { id: 24, nome: 'Participante 24', email: 'participante24@example.com', status: 'pendente' },
+    { id: 23, nome: 'Gabriel Glasckowicz', email: 'gabrielGlasckowicz', status: 'pendente' },
+    { id: 24, nome: 'João Vitor Mendes', email: 'joaoVitorM@gmail.com', status: 'pendente' },
   ],
 };
 
