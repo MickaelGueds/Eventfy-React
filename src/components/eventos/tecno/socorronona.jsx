@@ -22,18 +22,16 @@
                                     <div className="blur-background"></div>
                                     <section className="event-banner">
                                         <div className="event-details">
-                                            <h2>michele11</h2>
+                                            <h2>socorronona</h2>
                                             <p><i className="far fa-calendar-alt"></i> 2025-01-17</p>
-                                            <p><i className="fas fa-map-marker-alt"></i>michele`s house</p>
+                                            <p><i className="fas fa-map-marker-alt"></i>green place</p>
                                             <button className="buy-ticket">INSCREVA-SE AQUI</button>
                                             <button className="show-details" onClick={toggleDetails}>VER MAIS DETALHES</button>
                                             <div id="event-details-more" className="event-details-more" style={{ display: showDetails ? 'block' : 'none' }}>
-                                                <p>michelao</p>
+                                                <p>puta</p>
                                             </div>
                                         </div>
-                                        <div className="event-image">
-                                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeX3UYbwz2zV7vrbG_iCvsgrFKCKJFHOM-Hw&s" alt="Imagem do Evento" />
-                                        </div>
+                                        <div className="event-image"><img src="https://extra.globo.com/incoming/25585437-2ba-2e9/w533h800/whatsapp-image-2022-10-06-at-11.47.54.jpeg.jpg" alt="Imagem do Evento" /></div>
                                     </section>
                                     <section className="related-events">
                                         <h2>Eventos relacionados a Tecnologia e Inovação</h2>

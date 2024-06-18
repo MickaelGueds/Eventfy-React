@@ -22,21 +22,19 @@
                                     <div className="blur-background"></div>
                                     <section className="event-banner">
                                         <div className="event-details">
-                                            <h2>michele111</h2>
-                                            <p><i className="far fa-calendar-alt"></i> 2025-01-17</p>
-                                            <p><i className="fas fa-map-marker-alt"></i>michele`s house</p>
+                                            <h2>peituda</h2>
+                                            <p><i className="far fa-calendar-alt"></i> 1010-10-10</p>
+                                            <p><i className="fas fa-map-marker-alt"></i>leite</p>
                                             <button className="buy-ticket">INSCREVA-SE AQUI</button>
                                             <button className="show-details" onClick={toggleDetails}>VER MAIS DETALHES</button>
                                             <div id="event-details-more" className="event-details-more" style={{ display: showDetails ? 'block' : 'none' }}>
-                                                <p>michelao</p>
+                                                <p>socorro puta</p>
                                             </div>
                                         </div>
-                                        <div className="event-image">
-                                            <img src="1" alt="Imagem do Evento" />
-                                        </div>
+                                        <div className="event-image"><img src="https://extra.globo.com/incoming/25585437-2ba-2e9/w533h800/whatsapp-image-2022-10-06-at-11.47.54.jpeg.jpg" alt="Imagem do Evento" /></div>
                                     </section>
                                     <section className="related-events">
-                                        <h2>Eventos relacionados a Tecnologia e Inovação</h2>
+                                        <h2>Eventos relacionados a Sustentabilidade e Responsabilidade Social</h2>
                                         <div className="related-events-container">
                                             <div className="related-event">
                                                 <Link to='/Lite'>
