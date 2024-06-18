@@ -9,7 +9,7 @@ const Principal = () => {
         <div>
             <HeaderDesenvolvedor />
             <div className={styles.container}>
-                <h1 className={styles.title}>Página do Desenvolvedor</h1>
+                <h1 className={styles.title}>Página do Organizador</h1>
                 <div className={styles.options}>
                     <Link to="/criar" className={styles.option}>
                         <FaCalendarPlus className={styles.icon} />

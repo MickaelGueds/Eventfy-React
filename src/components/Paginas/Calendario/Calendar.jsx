@@ -123,7 +123,7 @@ function Calendar() {
                         end: "dayGridMonth,timeGridWeek,timeGridDay",
                     }}
                     height={"90vh"}
-                    events={events}
+                    events={staticEvents}
                     locale={pt}
                     eventClick={handleEventClick}
                     eventContent={(info) => (

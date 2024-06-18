@@ -21,7 +21,7 @@ const Sidebar = ({ active }) => {
       <Content>
         <SidebarItem Icon={FaHome} Text=" Home" Path="/Home" />
         <SidebarItem Icon={FaRegCalendarAlt} Text="Calendário" Path="/calendario"/>
-        <SidebarItem Icon={FaUser} Text="Página de Desenvolvedor" Path="/OrgLogin" />
+        <SidebarItem Icon={FaUser} Text="Página de Organizador" Path="/OrgLogin" />
         
         
         

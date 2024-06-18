@@ -20,8 +20,8 @@ import Renova from '../../assets/Renova.webp';
 import Fest from '../../assets/Fest.webp';
 import Urban from '../../assets/Urban.webp';
 import Lite from '../../assets/Lite.webp';
-import { Link } from 'react-router-dom'; // Importar Link para navegação
-// import Footer from '../Footer/Footer'; // Importe o Footer
+import { Link } from 'react-router-dom'; 
+import Footer from '../Footer/Footer'; 
 
 function Home() {
   const data = [
@@ -105,7 +105,7 @@ function Home() {
           <Link to="/feedback" className={styles.feedbackButton}>Deixe seu Feedback</Link>
         </div>
       </div>
-      {/* <Footer />  */}
+      <Footer/>
     </div>
   );
 }
