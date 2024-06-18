@@ -125,56 +125,70 @@ app.post('/criar', (req, res) => {
                 import Header from '../../Header';
                 import { Link } from 'react-router-dom';
 
-                const Evento = () => {
-                    const [showDetails, setShowDetails] = useState(false);
+                const Evento = ({ nome_evento, data, localizacao, descricao, imagem_url, categoria, relatedEvents }) => {
+                const [showDetails, setShowDetails] = useState(false);
+                const [isInscrito, setIsInscrito] = useState(false);
 
-                    const toggleDetails = () => {
-                        setShowDetails(!showDetails);
-                    };
-                    
-                    return (
-                        <div> 
-                            <Header/>
-                            <div> 
-                                <main>
-                                    <div className="blur-background"></div>
-                                    <section className="event-banner">
-                                        <div className="event-details">
-                                            <h2>${nome_evento}</h2>
-                                            <p><i className="far fa-calendar-alt"></i> ${data}</p>
-                                            <p><i className="fas fa-map-marker-alt"></i>${localizacao}</p>
-                                            <button className="buy-ticket">INSCREVA-SE AQUI</button>
-                                            <button className="show-details" onClick={toggleDetails}>VER MAIS DETALHES</button>
-                                            <div id="event-details-more" className="event-details-more" style={{ display: showDetails ? 'block' : 'none' }}>
-                                                <p>${descricao}</p>
-                                            </div>
-                                        </div>
-                                        ${imagem_url ? `<div className="event-image"><img src="${imagem_url}" alt="Imagem do Evento" /></div>` : ''}
-                                    </section>
-                                    <section className="related-events">
-                                        <h2>Eventos relacionados a ${categoria}</h2>
-                                        <div className="related-events-container">
-                                            <div className="related-event">
-                                                <Link to='/Lite'>
-                                                    <img src="URL_DA_IMAGEM_LITE" alt="Encontro de Literatura e Performance Poética" />
-                                                    <p> Encontro de Literatura e Performance Poética</p>
-                                                </Link>
-                                            </div>
-                                            <div className="related-event">
-                                                <Link to='/Urban'>
-                                                    <img src="URL_DA_IMAGEM_URBAN" alt=" Workshop de Arte Urbana: Grafite e Street Art" />
-                                                    <p>Workshop de Arte Urbana: Grafite e Street Art</p>
-                                                </Link>
-                                            </div>
-                                        </div>
-                                    </section>
-                                </main>
+                const toggleDetails = () => {
+                    setShowDetails(!showDetails);
+                };
+
+                const handleInscricao = () => {
+                    setIsInscrito(true);
+                    console.log('Inscrição confirmada');
+                };
+
+                return (
+                    <div>
+                    <Header />
+                    <div>
+                        <main>
+                        <div className="blur-background"></div>
+                        <section className="event-banner">
+                            <div className="event-details">
+                            <h2>{nome_evento}</h2>
+                            <p><i className="far fa-calendar-alt"></i> {data}</p>
+                            <p><i className="fas fa-map-marker-alt"></i> {localizacao}</p>
+                            <button
+                                className={`buy-ticket ${isInscrito ? 'inscrito' : ''}`}
+                                onClick={handleInscricao}
+                                disabled={isInscrito}
+                            >
+                                {isInscrito ? 'Inscrito' : 'INSCREVA-SE AQUI'}
+                            </button>
+                            {isInscrito && <p className="confirmation-message">Inscrição confirmada!</p>}
+                            <button className="show-details" onClick={toggleDetails}>VER MAIS DETALHES</button>
+                            <div id="event-details-more" className="event-details-more" style={{ display: showDetails ? 'block' : 'none' }}>
+                                <p>{descricao}</p>
                             </div>
-                        </div>
-                    );
+                            </div>
+                            {imagem_url && (
+                            <div className="event-image">
+                                <img src={imagem_url} alt="Imagem do Evento" />
+                            </div>
+                            )}
+                        </section>
+                        <section className="related-events">
+                            <h2>Eventos relacionados a {categoria}</h2>
+                            <div className="related-events-container">
+                            {relatedEvents.map(event => (
+                                <div className="related-event" key={event.id}>
+                                <Link to={event.link}>
+                                    <img src={event.imageUrl} alt={event.name} />
+                                    <p>{event.name}</p>
+                                </Link>
+                                </div>
+                            ))}
+                            </div>
+                        </section>
+                        </main>
+                    </div>
+                    </div>
+                );
                 };
 
                 export default Evento;
+
             `;
 
             try {
