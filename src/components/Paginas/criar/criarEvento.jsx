@@ -8,39 +8,48 @@ const CreateEvent = () => {
     const [location, setLocation] = useState('');
     const [date, setDate] = useState('');
     const [time, setTime] = useState('');
+    const [ticket, setTicket] = useState('');
     const [category, setCategory] = useState('');
-    const [image, setImage] = useState(null);
-    const [imagePreview, setImagePreview] = useState(null);
+    const [imageUrl, setImageUrl] = useState('');
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         const eventData = {
-            title,
-            description,
-            location,
-            date,
-            time,
-            category,
-            image,
+            nome_evento: title,
+            descricao: description,
+            localizacao: location,
+            data: date,
+            horario: time,
+            ingressos_disponiveis: ticket,
+            categoria: category,
+            imagem_url: imageUrl
         };
-        console.log(eventData);
-        window.location.reload();
-    };
 
-    const handleImageChange = (e) => {
-        const file = e.target.files[0];
-        setImage(file);
-        setImagePreview(URL.createObjectURL(file));
-    };
+        try {
+            const response = await fetch('http://localhost:5001/criar', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(eventData),
+            });
 
-    const handleRemoveImage = () => {
-        setImage(null);
-        setImagePreview(null);
+            if (!response.ok) {
+                throw new Error('Failed to create event');
+            }
+
+            const result = await response.json();
+            console.log(result);
+            alert('Evento criado com sucesso!');
+        } catch (error) {
+            console.error('Error:', error);
+            alert('Erro ao criar o evento.');
+        }
     };
 
     return (
         <div>
-            <Header/>
+            <Header />
             <div className={styles.bodyEvento}>
                 <form className={styles.formEvento} onSubmit={handleSubmit}>
                     <div>
@@ -88,6 +97,15 @@ const CreateEvent = () => {
                         />
                     </div>
                     <div>
+                        <label className={styles.labelEvento}>Ingressos Disponíveis:</label>
+                        <input
+                            type="number"
+                            className={styles.inputEvento}
+                            value={ticket}
+                            onChange={(e) => setTicket(e.target.value)}
+                        />
+                    </div>
+                    <div>
                         <label className={styles.labelEvento}>Categoria:</label>
                         <select
                             className={styles.selectEvento}
@@ -102,25 +120,13 @@ const CreateEvent = () => {
                         </select>
                     </div>
                     <div>
-                        <label className={styles.labelEvento}>Imagem:</label>
-                        <label htmlFor="file-upload" className={styles.customFileUploadEvento}>
-                            Escolher Imagem
-                        </label>
+                        <label className={styles.labelEvento}>URL da Imagem:</label>
                         <input
-                            id="file-upload"
-                            type="file"
-                            accept="image/*"
-                            onChange={handleImageChange}
-                            style={{ display: 'none' }} 
+                            type="text"
+                            className={styles.inputEvento}
+                            value={imageUrl}
+                            onChange={(e) => setImageUrl(e.target.value)}
                         />
-                        {imagePreview && (
-                            <div className={styles.imagePreviewContainerEvento}>
-                                <img src={imagePreview} alt="Pré-visualização" className={styles.imagePreviewEvento} />
-                                <button type="button" className={styles.removeImageButtonEvento} onClick={handleRemoveImage}>
-                                    Remover Imagem
-                                </button>
-                            </div>
-                        )}
                     </div>
                     <button className={styles.submitButtonEvento} type="submit">Criar Evento</button>
                 </form>

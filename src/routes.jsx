@@ -15,7 +15,6 @@ import Entre from '../src/components/eventos/Des/Entre'
 import Gestao from './components/eventos/Des/gestao'
 import CreateEvent from '../src/components/Paginas/criar/criarEvento'
 import Home from '../src/components/Home/Home'
-
 import Fest from '../src/components/eventos/Cult/Fest'
 import Lite from '../src/components/eventos/Cult/Lite'
 import Urban from '../src/components/eventos/Cult/Urban'

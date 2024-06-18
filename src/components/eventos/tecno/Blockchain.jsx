@@ -53,7 +53,7 @@ const Evento = () => {
               </Link>
             </div>
             <div className="related-event">
-             
+            
               <Link to= '/React'>
                 <img src={React} alt="Desenvolvimento de Aplicações Web com React" />
                 <p>Desenvolvimento de Aplicações Web com React</p>

@@ -67,7 +67,7 @@ function Home() {
     <div>
       <Header />
       <div className={styles.container}>
-        <h1 className={styles.title}>Slider com React JS</h1>
+        <h1 className={styles.title}>EVENTOS</h1>
 
         <Swiper
           modules={[EffectCoverflow]}
@@ -83,7 +83,7 @@ function Home() {
           ))}
         </Swiper>
 
-        <h1 className={styles['section-title']}>Eventos</h1>
+        <h1 className={styles['section-title']}>CATEGORIAS DE EVENTOS</h1>
 
         {categories.map((category, index) => (
           <section key={index} className={styles['event-category']}>
