@@ -19,6 +19,10 @@ import Home from '../src/components/Home/Home'
 import Fest from '../src/components/eventos/Cult/Fest'
 import Lite from '../src/components/eventos/Cult/Lite'
 import Urban from '../src/components/eventos/Cult/Urban'
+import OrganizadorLogin from "./components/Paginas/PáginaDes/Login/OrganizadorLogin"
+import Principal from '../src/components/Paginas/PáginaDes/Desenvolvedor/Principal'
+
+
 
 
 
@@ -26,6 +30,8 @@ import Urban from '../src/components/eventos/Cult/Urban'
 function AppRoutes(){
     return (
         <Routes>
+            <Route path="/Principal" element={ <Principal/> }></Route>
+            <Route path="/OrgLogin" element={ <OrganizadorLogin/> }></Route>
             <Route path="/home" element={ <Home/> }></Route>
             <Route path="/" element={ <Login/> }></Route>
             <Route path="/calendario" element={ <Calendar/> }></Route>

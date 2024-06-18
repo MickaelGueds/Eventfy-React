@@ -3,9 +3,8 @@ import { Container, Content } from './styles'
 import { 
   FaTimes, 
   FaHome, 
-  FaRegFileAlt,
   FaRegCalendarAlt,
-  FaChartBar
+  FaUser
 } from 'react-icons/fa'
 
 import SidebarItem from '../SidebarItem'
@@ -21,13 +20,11 @@ const Sidebar = ({ active }) => {
       <FaTimes onClick={closeSidebar} />  
       <Content>
         <SidebarItem Icon={FaHome} Text=" Home" Path="/Home" />
-        <SidebarItem Icon={FaChartBar} Text="Statistics" Path="/estatisticas"/>
-        {/* <SidebarItem Icon={FaUserAlt} Text="Users" /> */}
-        {/* <SidebarItem Icon={FaEnvelope} Text="Mail" /> */}
-        <SidebarItem Icon={FaRegCalendarAlt} Text="Calendar" Path="/calendario"/>
-        {/* <SidebarItem Icon={FaIdCardAlt} Text="Employees" /> */}
-        <SidebarItem Icon={FaRegFileAlt} Text="Gestão de Participante" Path="/GestaoDeParticipantes" />
-        {/* <SidebarItem Icon={FaRegSun} Text="Settings" /> */}
+        <SidebarItem Icon={FaRegCalendarAlt} Text="Calendário" Path="/calendario"/>
+        <SidebarItem Icon={FaUser} Text="Página de Desenvolvedor" Path="/OrgLogin" />
+        
+        
+        
       </Content>
     </Container>
   )
