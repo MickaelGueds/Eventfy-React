@@ -15,7 +15,7 @@ const OrganizadorLogin = () => {
         event.preventDefault();
 
         try {
-            const response = await axios.post('http://localhost:5001/login-organizador', {
+            const response = await axios.post('http://localhost:5001/OrgLogin', {
                 useremail,
                 password
             });

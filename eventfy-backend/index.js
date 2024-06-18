@@ -186,6 +186,27 @@ app.post('/criar', (req, res) => {
         });
     });
 });
+app.post('/OrgLogin', (req, res) => {
+    const { useremail, password } = req.body;
+
+    if (!useremail || !password) {
+        return res.status(400).json({ error: 'Email and password are required' });
+    }
+
+    const query = 'SELECT * FROM gerentes WHERE email = ? AND senha = ?';
+    db.query(query, [useremail, password], (err, results) => {
+        if (err) {
+            return res.status(500).json({ error: 'Error checking organizer credentials' });
+        }
+
+        if (results.length > 0) {
+            res.status(200).json({ message: 'Login successful' });
+        } else {
+            res.status(401).json({ error: 'Invalid email or password' });
+        }
+    });
+});
+
 
 const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => {
